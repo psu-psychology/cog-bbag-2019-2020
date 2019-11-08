@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Rick Gilmore" />
+  <title>Out of Control</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="libs/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="libs/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="css/gilmore_revealjs.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Out of Control</h1>
+    <h2 class="author">Rick Gilmore</h2>
+    <h3 class="date">2019-11-08 13:53:53</h3>
+</section>
+
+<section><section id="preliminaries" class="title-slide slide level1"><h1>Preliminaries</h1></section><section id="support" class="slide level2">
+<h2>Support</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSF_Logo.PNG" height=150px> <img src="https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/ex89p5pm1bvck2ow3vwd" height=150px> <img src="https://nationalpress.org/wp-content/uploads/2016/04/NIDA-logo-300x300.jpg" height=150px/> <img src="http://bewellva.com/wp-content/uploads/2017/12/NIMH-Logo_14-e1510955490255.jpg" height=150px/> </br> <img src="img/icds.png" height=150px> </br><img src="https://sloan.org/storage/app/media/Logos/Sloan-Logo-stacked-black-web.png" height=150px> <img src="http://newsroom.unl.edu/announce/files/file77330.jpg" height=150px/> <img src="https://www.unicef.org.hk/wp-content/uploads/2017/08/Logo-05_Lego-foundation_UNICEF_partnership.jpg" height=150px /> </br></p>
+<!-- Funding sources with icons -->
+</section><section id="agenda" class="slide level2">
+<h2>Agenda</h2>
+<ul>
+<li>Psychology is harder than physics</li>
+<li>But why?</li>
+<li>What to do about it?</li>
+<li>State spaces</li>
+</ul>
+</section></section>
+<section><section id="psychology-is-harder-than-physics" class="title-slide slide level1"><h1>Psychology is harder than physics</h1></section><section class="slide level2">
+
+<p><img src="img/psych-harder-1.jpg" height=500px/></p>
+</section><section class="slide level2">
+
+<p><img src="img/psych-harder-2.jpg" height=500px/></p>
+</section></section>
+<section><section id="but-why" class="title-slide slide level1"><h1>But why?</h1></section><section class="slide level2">
+
+<p><img src="img/nested-causality.jpeg" height=500px/></p>
+</section><section class="slide level2">
+
+<table>
+<thead>
+<tr class="header">
+<th>Realm</th>
+<th>Domain</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(W\)</span></td>
+<td>The world</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B\)</span></td>
+<td>The body</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(N\)</span></td>
+<td>The nervous system</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(M\)</span></td>
+<td>The mind</td>
+</tr>
+</tbody>
+</table>
+</section><section id="nested-causality" class="slide level2">
+<h2>Nested causality</h2>
+</section><section class="slide level2">
+
+<ul>
+<li>Mind (<span class="math inline">\(M\)</span>) within nervous system (<span class="math inline">\(N\)</span>)</li>
+<li>Nervous system (<span class="math inline">\(N\)</span>) within body (<span class="math inline">\(N\)</span>)</li>
+<li>Body (<span class="math inline">\(B\)</span>) within world (<span class="math inline">\(W\)</span>)</li>
+</ul>
+</section><section id="mutual-coupling-of-dynamic-states" class="slide level2">
+<h2>Mutual coupling of dynamic states</h2>
+</section><section class="slide level2">
+
+<p><span class="math inline">\(\dot{M} = f(M,N)\)</span></p>
+<p><span class="math inline">\(\dot{N} = f(N,B)\)</span></p>
+<p><span class="math inline">\(\dot{B} = f(B,N,W)\)</span></p>
+<p><span class="math inline">\(\dot{W} = f(W,B)\)</span></p>
+</section><section id="measure" class="slide level2">
+<h2>Measure…</h2>
+</section><section class="slide level2">
+
+<ul>
+<li><span class="math inline">\(W\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(N\)</span> <strong>directly</strong></li>
+<li>At varied spatial &amp; temporal scales</li>
+</ul>
+</section><section class="slide level2">
+
+<p><a href=""> <img src="https://media.nature.com/lw926/nature-assets/neuro/journal/v17/n11/images/nn.3839-F1.jpg" height=500px/> </a></p>
+<p><a href="http://doi.org/10.1038/nn.3839">Sejnowski, Churchland, &amp; Movshon, 2014</a></p>
+</section><section id="but-measure" class="slide level2">
+<h2>but measure…</h2>
+</section><section class="slide level2">
+
+<ul>
+<li><span class="math inline">\(M\)</span> <strong>indirectly</strong></li>
+<li>Only via <span class="math inline">\(N\)</span>, <span class="math inline">\(B\)</span></li>
+</ul>
+</section><section id="m-highly-salient-but" class="slide level2">
+<h2><span class="math inline">\(M\)</span> highly salient, but…</h2>
+</section><section class="slide level2">
+
+<p><img src="https://static.boredpanda.com/blog/wp-content/uploads/2018/07/arctic-fox-rescued-iceberg-canada-harrigan-russell-1-5b39d097f2b83__700.jpg" width="850px" style="display: block; margin: auto;" /> <!-- Fox on an iceberg. Like iceberg, belies bulk below. --></p>
+</section><section class="slide level2">
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Blackbox3D-withGraphs.png" width="850px" style="display: block; margin: auto;" /> <!-- Black Box --></p>
+</section><section class="slide level2">
+
+<p><img src="https://images-na.ssl-images-amazon.com/images/I/41Pe93nMvcL._SX331_BO1,204,203,200_.jpg" height=500px/> <!-- Ashby's Cybernetics --></p>
+</section><section class="slide level2">
+
+<p><img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px></p>
+<!-- The whole elephant -->
+</section><section class="slide level2">
+
+<p>
+<a href="https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg#/media/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg/1200px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg" alt="Pieter Bruegel the Elder - The Tower of Babel (Vienna) - Google Art Project.jpg" height=500px></a><br>By <a href="https://en.wikipedia.org/wiki/en:Pieter_Bruegel_the_Elder" class="extiw" title="w:en:Pieter Bruegel the Elder">Pieter Brueghel the Elder</a> - <a rel="nofollow" class="external text" href="//www.google.com/culturalinstitute/asset-viewer/bAGKOdJfvfAhYQ">bAGKOdJfvfAhYQ at Google Cultural Institute</a> zoom level Scaled down from second-highest, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=22178101">Link</a>
+</p>
+</section><section class="slide level2">
+
+<p><img src="https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg" height=600px/></p>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>…psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.</em>”</p>
+</blockquote>
+<p><small><a href="https://www.psychologicalscience.org/observer/becoming-a-cumulative-science">Mischel, 2009</a></small></p>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing, rather than building on each other’s directly relevant best work.</em>”</p>
+</blockquote>
+<p><small><a href="https://www.psychologicalscience.org/observer/becoming-a-cumulative-science">Mischel, 2009</a></small></p>
+</section><section id="oh-give-me-a-ome" class="slide level2">
+<h2>Oh give me a ’ome…</h2>
+<ul>
+<li><a href="https://www.genome.gov/12011238/an-overview-of-the-human-genome-project/">Genome</a></li>
+<li><a href="https://hupo.org/human-proteome-project">Proteome</a></li>
+<li><a href="http://www.hmdb.ca/">Metabolome</a></li>
+<li><a href="http://www.humanconnectomeproject.org/">Connectome</a></li>
+</ul>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>Behavior is the linchpin of the most vexing problems in public health, and a better understanding of behavior is fundamental to achieving positive health outcomes, from prenatal development throughout adulthood.</em>”</p>
+</blockquote>
+<p><a href="https://www.rick-gilmore.com/post/behavior-is-the-linchpin/">Gilmore, Adolph, &amp; Tamis-LeMonda, 2019</a></p>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>Behavior contributes to the progression or prevention of disease, defines a disorder or marks recovery, and provides mechanisms for therapeutic intervention.</em>”</p>
+</blockquote>
+<p><a href="https://www.rick-gilmore.com/post/behavior-is-the-linchpin/">Gilmore, Adolph, &amp; Tamis-LeMonda, 2019</a></p>
+</section><section id="what-about-a-behaviorome" class="slide level2">
+<h2>What about a ‘behaviorome’?</h2>
+</section><section class="slide level2">
+
+<iframe src="http://mousebehavior.org/" width="800" height="600">
+</iframe>
+<p><a href="https://mousebehavior.org/" class="uri">https://mousebehavior.org/</a></p>
+</section><section class="slide level2">
+
+<iframe src="https://play-project.org/" width="1000" height="600">
+</iframe>
+<p><a href="https://play-project.org" class="uri">https://play-project.org</a></p>
+</section><section id="the-rumsfeldian-space-of-knowledge" class="slide level2">
+<h2>The ‘Rumsfeldian’ space of knowledge</h2>
+</section><section class="slide level2">
+
+<p><img src="https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718071/articles/2013/09/02/errol-morris-on-his-donald-rumsfeld-doc-the-unknown-known-at-telluride/130830-rumsfeld-doc-stern-tease_nzrxqc" width="850px" style="display: block; margin: auto;" /></p>
+</section><section class="slide level2">
+
+<table>
+<tbody>
+<tr class="odd">
+<td>known-knowns</td>
+<td>known-unknowns</td>
+</tr>
+<tr class="even">
+<td>unknown-knowns</td>
+<td>unknown-unknowns</td>
+</tr>
+</tbody>
+</table>
+</section><section class="slide level2">
+
+<table>
+<tbody>
+<tr class="odd">
+<td>known-knowns</td>
+<td>known-unknowns</td>
+</tr>
+<tr class="even">
+<td><strong>unknown-knowns</strong></td>
+<td>unknown-unknowns</td>
+</tr>
+</tbody>
+</table>
+</section><section id="what-are-psychologys-unknown-knowns" class="slide level2">
+<h2>What are psychology’s unknown-knowns?</h2>
+</section></section>
+<section><section id="how-to-proceed" class="title-slide slide level1"><h1>How to proceed?</h1></section><section id="back-to-the-future" class="slide level2">
+<h2>Back to the Future</h2>
+<ul>
+<li>Origins (Wiener and Ashby)</li>
+<li>State spaces and transitions between them (aka dynamics)</li>
+<li>Black boxes</li>
+<li>Senses are perceptual systems</li>
+<li>Analog vs. algorithmic control</li>
+<li>Perceptual control theory (Powers) or hierarchies of control</li>
+<li>A neural architecture for perceptual control (Swanson)</li>
+<li>Neuroscience needs behavior</li>
+<li>How do we capture state spaces?</li>
+<li>Complexity before simplicity</li>
+</ul>
+</section><section id="characterizing-w" class="slide level2">
+<h2>Characterizing <span class="math inline">\(W\)</span></h2>
+<ul>
+<li>Natural scene statistics</li>
+<li>Language corpora (e.g., TalkBank)</li>
+<li>Statistical learning</li>
+<li>PLAY project</li>
+</ul>
+</section><section id="characterizing-b-and-dotb" class="slide level2">
+<h2>Characterizing <span class="math inline">\(B\)</span> and <span class="math inline">\(\dot{B}\)</span></h2>
+<ul>
+<li>Behavior</li>
+<li>Physiological states</li>
+</ul>
+</section><section id="behavior" class="slide level2">
+<h2>Behavior</h2>
+<ul>
+<li>Body, eye position</li>
+<li>Vocalization</li>
+</ul>
+</section><section class="slide level2">
+
+<iframe src="https://www.apa.org/science/about/psa/2017/10/video-data" width="1000" height="600">
+</iframe>
+<p><span class="citation" data-cites="Adolph_KE_Gilmore_RO_Kennedy_JL2017-va">[@Adolph_KE_Gilmore_RO_Kennedy_JL2017-va]</span></p>
+</section><section id="physiological-states" class="slide level2">
+<h2>Physiological states</h2>
+<ul>
+<li>Autonomic (HR, respiration)</li>
+<li>Pupillary responses</li>
+<li>Endocrine</li>
+<li>EMG/EGG</li>
+</ul>
+</section><section id="characterizing-n" class="slide level2">
+<h2>Characterizing <span class="math inline">\(N\)</span></h2>
+</section><section id="network-science-as-a-representation-of-state-spaces" class="slide level2">
+<h2>Network science as a representation of state spaces</h2>
+</section></section>
+<section><section id="sharing-to-accumulate-knowledge" class="title-slide slide level1"><h1>Sharing to accumulate knowledge</h1></section><section id="we-dont-have-to-share-toothbrushes" class="slide level2">
+<h2>We don’t have to share toothbrushes…</h2>
+<ul>
+<li>But we can share our data, our code, our materials, and our procedures</li>
+<li>In <strong>F</strong>indable, <strong>A</strong>ccessible, <strong>I</strong>nteroperable, and <strong>R</strong>eproducible ways <span class="citation" data-cites="Wilkinson2016-qr">[@Wilkinson2016-qr]</span></li>
+</ul>
+</section><section id="two-failures" class="slide level2">
+<h2>Two failures</h2>
+<ul>
+<li>What behaviors are most commonly measured in child development research?</li>
+</ul>
+</section><section class="slide level2">
+
+<p>What is the developmental trajectory of sensitivity to motion?</p>
+<iframe src="https://www.frontiersin.org/articles/10.3389/fnint.2015.00049/full" width="1000" height="600">
+</iframe>
+<p><span class="citation" data-cites="Hadad2015-qd">[@Hadad2015-qd]</span></p>
+</section><section class="slide level2">
+
+<div class="figure" style="text-align: center">
+<img src="https://www.frontiersin.org/files/Articles/145704/fnint-09-00049-HTML/image_m/fnint-09-00049-t001.jpg" alt="Hadad et al. 2015 Table 1" width="850px" />
+<p class="caption">
+Hadad et al. 2015 Table 1
+</p>
+</div>
+</section><section class="slide level2">
+
+<p>No similar database for adult motion sensitivity.</p>
+</section><section id="and-in-response" class="slide level2">
+<h2>And in response</h2>
+<ul>
+<li>PLAY project</li>
+<li>Web-based/version-controlled protocols</li>
+</ul>
+</section><section id="imagine-if" class="slide level2">
+<h2>Imagine if</h2>
+<p>All of the prior studies that used the X paradigm were openly shared in formats you could use to calculate a prior distribution.</p>
+<p>The display code used for a study you wanted to replicate was readily available so you could verify the parameters used and make decisions for your planned replication.</p>
+</section></section>
+<section id="out-of-control" class="title-slide slide level1"><h1>Out of control</h1></section>
+<section><section id="thank-you" class="title-slide slide level1"><h1>Thank you</h1></section><section class="slide level2">
+
+<video width="800" loop data-autoplay>
+<source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
+</video>
+<p><a href="mailto:rogilmore@psu.edu" class="email">rogilmore@psu.edu</a></p>
+<p><a href="https://gilmore-lab.github.io" class="uri">https://gilmore-lab.github.io</a></p>
+<p><a href="https://psu-psychology.github.io/cog-bbag-2019-2020/2019-11-13-gilmore.html/" class="uri">https://psu-psychology.github.io/cog-bbag-2019-2020/2019-11-13-gilmore.html/</a></p>
+</section><section id="stack" class="slide level2">
+<h2>Stack</h2>
+<p>This talk was produced on 2019-11-08 in <a href="http://rstudio.com">RStudio</a> version using R Markdown and the reveal.JS framework. The code and materials used to generate the slides may be found at <a href="https://psu-psychology.github.io/cog-bbag-2019-2020/2019-11-13-gilmore.html/" class="uri">https://psu-psychology.github.io/cog-bbag-2019-2020/2019-11-13-gilmore.html/</a>. Information about the R Session that produced the code is as follows:</p>
+<pre><code>## R version 3.5.3 (2019-03-11)
+## Platform: x86_64-apple-darwin15.6.0 (64-bit)
+## Running under: macOS Mojave 10.14.6
+## 
+## Matrix products: default
+## BLAS: /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] databraryapi_0.1.6.9001
+## 
+## loaded via a namespace (and not attached):
+##  [1] Rcpp_1.0.1       revealjs_0.9     assertthat_0.2.1 packrat_0.5.0   
+##  [5] digest_0.6.19    R6_2.4.0         magrittr_1.5     evaluate_0.14   
+##  [9] highr_0.8        httr_1.4.0       stringi_1.4.3    curl_3.3        
+## [13] keyring_1.1.0    rmarkdown_1.13   tools_3.5.3      stringr_1.4.0   
+## [17] xfun_0.8         yaml_2.2.0       rsconnect_0.8.13 compiler_3.5.3  
+## [21] htmltools_0.3.6  knitr_1.23</code></pre>
+</section></section>
+    </div>
+  </div>
+
+  <script src="libs/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="libs/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'libs/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'libs/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

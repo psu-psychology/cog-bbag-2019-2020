@@ -1,0 +1,356 @@
+---
+title: "Out of Control"
+author: "Rick Gilmore"
+date: "`r Sys.time()`"
+bib: bib/gilmore.bib
+output: 
+  revealjs::revealjs_presentation:
+    css: css/gilmore_revealjs.css
+    self_contained: false
+    lib_dir: libs
+    incremental: false
+    theme: simple
+    transition: none
+    reveal_plugins: ["notes", "zoom"]
+    reveal_options:
+      slideNumber: true
+      previewLinks: false
+      center: true
+      touch: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, 
+                      message = FALSE,
+                      fig.align = "center",
+                      out.width = "850px")
+library(databraryapi)
+login_db("rogilmore@psu.edu")
+```
+
+# Preliminaries
+
+## Support
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSF_Logo.PNG" height=150px>
+<img src="https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/ex89p5pm1bvck2ow3vwd" height=150px>
+<img src="https://nationalpress.org/wp-content/uploads/2016/04/NIDA-logo-300x300.jpg" height=150px/>
+<img src="http://bewellva.com/wp-content/uploads/2017/12/NIMH-Logo_14-e1510955490255.jpg" height=150px/>
+</br>
+<img src="img/icds.png" height=150px>
+</br><img src="https://sloan.org/storage/app/media/Logos/Sloan-Logo-stacked-black-web.png" height=150px>
+<img src="http://newsroom.unl.edu/announce/files/file77330.jpg" height=150px/>
+<img src="https://www.unicef.org.hk/wp-content/uploads/2017/08/Logo-05_Lego-foundation_UNICEF_partnership.jpg" height=150px />
+</br>
+
+
+<!-- Funding sources with icons -->
+
+## Agenda
+
+- Psychology is harder than physics
+- But why?
+- What to do about it?
+- State spaces
+
+# Psychology is harder than physics
+
+---
+
+<img src="img/psych-harder-1.jpg" height=500px/>
+
+---
+
+<img src="img/psych-harder-2.jpg" height=500px/>
+
+# But why?
+
+---
+
+<img src="img/nested-causality.jpeg" height=500px/>
+
+---
+
+| Realm               | Domain               |
+|---------------------|----------------------|
+| $W$   | The world |
+| $B$   | The body |
+| $N$   | The nervous system |
+| $M$   | The mind |
+
+## Nested causality
+
+---
+
+- Mind ($M$) within nervous system ($N$)
+- Nervous system ($N$) within body ($N$)
+- Body ($B$) within world ($W$)
+
+## Mutual coupling of dynamic states
+
+---
+
+$\dot{M} = f(M,N)$
+
+$\dot{N} = f(N,B)$
+
+$\dot{B} = f(B,N,W)$
+
+$\dot{W} = f(W,B)$
+
+## Measure...
+
+---
+
+- $W$, $B$, $N$ **directly**
+- At varied spatial & temporal scales
+
+---
+
+<a href="">
+<img src="https://media.nature.com/lw926/nature-assets/neuro/journal/v17/n11/images/nn.3839-F1.jpg" height=500px/>
+</a>
+
+[Sejnowski, Churchland, & Movshon, 2014](http://doi.org/10.1038/nn.3839)
+
+## but measure...
+
+---
+
+- $M$ **indirectly**
+- Only via $N$, $B$
+
+## $M$ highly salient, but...
+
+---
+
+
+```{r}
+knitr::include_graphics("https://static.boredpanda.com/blog/wp-content/uploads/2018/07/arctic-fox-rescued-iceberg-canada-harrigan-russell-1-5b39d097f2b83__700.jpg")
+```
+<!-- Fox on an iceberg. Like iceberg, belies bulk below. -->
+
+---
+
+```{r}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/7/7c/Blackbox3D-withGraphs.png")
+```
+<!-- Black Box -->
+
+---
+
+<img src="https://images-na.ssl-images-amazon.com/images/I/41Pe93nMvcL._SX331_BO1,204,203,200_.jpg" height=500px/>
+<!-- Ashby's Cybernetics -->
+
+---
+
+<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px>
+
+<!-- The whole elephant -->
+
+---
+
+<p><a href="https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg#/media/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg/1200px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg" alt="Pieter Bruegel the Elder - The Tower of Babel (Vienna) - Google Art Project.jpg" height=500px></a><br>By <a href="https://en.wikipedia.org/wiki/en:Pieter_Bruegel_the_Elder" class="extiw" title="w:en:Pieter Bruegel the Elder">Pieter Brueghel the Elder</a> - <a rel="nofollow" class="external text" href="//www.google.com/culturalinstitute/asset-viewer/bAGKOdJfvfAhYQ">bAGKOdJfvfAhYQ at Google Cultural Institute</a> zoom level Scaled down from second-highest, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=22178101">Link</a></p>
+
+---
+
+<img src="https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg" height=600px/>
+
+---
+
+> "*...psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.*"
+
+<small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
+
+---
+
+> "*The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing, rather than building on each other’s directly relevant best work.*"
+
+<small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
+
+## Oh give me a 'ome...
+
+- [Genome](https://www.genome.gov/12011238/an-overview-of-the-human-genome-project/)
+- [Proteome](https://hupo.org/human-proteome-project)
+- [Metabolome](http://www.hmdb.ca/)
+- [Connectome](http://www.humanconnectomeproject.org/)
+
+---
+
+>"*Behavior is the linchpin of the most vexing problems in public health, and a better understanding of behavior is fundamental to achieving positive health outcomes, from prenatal development throughout adulthood.*"
+
+[Gilmore, Adolph, & Tamis-LeMonda, 2019](https://www.rick-gilmore.com/post/behavior-is-the-linchpin/)
+
+---
+
+>"*Behavior contributes to the progression or prevention of disease, defines a disorder or marks recovery, and provides mechanisms for therapeutic intervention.*"
+
+[Gilmore, Adolph, & Tamis-LeMonda, 2019](https://www.rick-gilmore.com/post/behavior-is-the-linchpin/)
+
+## What about a 'behaviorome'?
+
+---
+
+<iframe src="http://mousebehavior.org/" width=800 height=600>
+</iframe>
+
+<https://mousebehavior.org/>
+
+---
+
+<iframe src="https://play-project.org/" width=1000 height=600>
+</iframe>
+
+<https://play-project.org>
+
+
+## The 'Rumsfeldian' space of knowledge
+
+---
+
+```{r}
+knitr::include_graphics("https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718071/articles/2013/09/02/errol-morris-on-his-donald-rumsfeld-doc-the-unknown-known-at-telluride/130830-rumsfeld-doc-stern-tease_nzrxqc")
+```
+
+---
+
+| | |
+|------------------|------------------|
+| known-knowns | known-unknowns |
+| unknown-knowns | unknown-unknowns |
+
+---
+
+| | |
+|------------------|------------------|
+| known-knowns | known-unknowns |
+| **unknown-knowns** | unknown-unknowns |
+
+## What are psychology's unknown-knowns?
+
+# How to proceed?
+
+<!-- --- -->
+
+<!-- - Recall our unknown-knowns -->
+<!-- - Embrace complexity -->
+<!-- - Restore behavior -->
+<!-- - Accumulate and share knowledge in re-discoverable ways -->
+
+## Back to the Future
+
+- Origins (Wiener and Ashby)
+- State spaces and transitions between them (aka dynamics)
+- Black boxes
+- Senses are perceptual systems
+- Analog vs. algorithmic control
+- Perceptual control theory (Powers) or hierarchies of control
+- A neural architecture for perceptual control (Swanson)
+- Neuroscience needs behavior
+- How do we capture state spaces?
+- Complexity before simplicity
+
+## Characterizing $W$
+
+- Natural scene statistics
+- Language corpora (e.g., TalkBank)
+- Statistical learning
+- PLAY project
+
+## Characterizing $B$ and $\dot{B}$
+
+- Behavior
+- Physiological states
+
+## Behavior
+
+- Body, eye position
+- Vocalization
+
+---
+
+<iframe src="https://www.apa.org/science/about/psa/2017/10/video-data" width=1000 height=600>
+</iframe>
+
+[@Adolph_KE_Gilmore_RO_Kennedy_JL2017-va]
+
+## Physiological states
+
+- Autonomic (HR, respiration)
+- Pupillary responses
+- Endocrine
+- EMG/EGG
+
+## Characterizing $N$
+
+## Network science as a representation of state spaces
+
+# Sharing to accumulate knowledge
+
+## We don't have to share toothbrushes...
+
+- But we can share our data, our code, our materials, and our procedures
+- In **F**indable, **A**ccessible, **I**nteroperable, and **R**eproducible ways [@Wilkinson2016-qr]
+
+## Two failures
+
+- What behaviors are most commonly measured in child development research?
+
+---
+
+What is the developmental trajectory of sensitivity to motion?
+
+<iframe src="https://www.frontiersin.org/articles/10.3389/fnint.2015.00049/full" width=1000 height=600>
+</iframe>
+
+[@Hadad2015-qd]
+
+---
+
+```{r, fig.cap="Hadad et al. 2015 Table 1"}
+knitr::include_graphics("https://www.frontiersin.org/files/Articles/145704/fnint-09-00049-HTML/image_m/fnint-09-00049-t001.jpg")
+```
+
+---
+
+No similar database for adult motion sensitivity.
+
+
+
+## And in response
+
+- PLAY project
+- Web-based/version-controlled protocols
+
+## Imagine if 
+
+All of the prior studies that used the X paradigm were openly shared in formats you could use to calculate a prior distribution.
+
+The display code used for a study you wanted to replicate was readily available so you could verify the parameters used and make decisions for your planned replication.
+
+# Out of control
+
+# Thank you
+
+---
+
+<video width="800" loop data-autoplay>
+  <source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
+  </video>
+
+rogilmore@psu.edu
+
+<https://gilmore-lab.github.io>
+
+<https://psu-psychology.github.io/cog-bbag-2019-2020/2019-11-13-gilmore.html/>
+
+---
+
+## Stack
+
+This talk was produced on `r Sys.Date()` in [RStudio](http://rstudio.com) version using R Markdown and the reveal.JS framework.
+The code and materials used to generate the slides may be found at <https://psu-psychology.github.io/cog-bbag-2019-2020/2019-11-13-gilmore.html/>.
+Information about the R Session that produced the code is as follows:
+
+```{r session-info}
+sessionInfo()
