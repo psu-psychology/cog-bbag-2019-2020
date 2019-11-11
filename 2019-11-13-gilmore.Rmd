@@ -347,11 +347,13 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/7/7c/Bla
 
 <small>
 [Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
 ---
 
 > "*The primary data of any investigation of a Black Box consists of a sequence of values of the vector with two components: (input state, output state).*"
 
-[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/5
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
 
 ---
 
@@ -560,70 +562,174 @@ knitr::include_graphics("https://ars.els-cdn.com/content/image/1-s2.0-S138376211
 
 ## Related approaches
 
+- Reafference, Helmholtzian 'unconscious inference'
 - Ecological Psychology (e.g., Gibson, Turvey)
 - Forward models/predictive control (e.g., Shadmehr & Mussa-Ivaldi; Wolpert)
-- Cognitive control/executive functions
-- Reafference, Helmholtzian 'unconscious inference'
+
+---
+
 - Embodied cognition
 - Dynamic Systems Theory (DST) (Van Gelder; Thelen & Smith; Beer; Warren)
 
+## Challenges
+
+- Beyond the periphery (perception and action)
+- Do peripheral dynamics inform central ones?
+- Beyond qualitative dynamics
+
 ---
 
-```{r,fig.cap="[Hotton & Yoshimi 2010](https://doi.org/10.1111/j.1551-6709.2010.01151.x)"}
-knitr::include_graphics("img/hotton-yoshimi-2010.jpg")
+- How to characterize & measure the relevant state spaces
+
+---
+
+| Realm | State spaces | Description |
+|--------|--------------|-------------|
+| $W$    | $\Phi$       | Physical environment |
+|        | $\Psi$       | Psychological environment |
+| $B$    | $J$          | Joint/body position |
+|        | $P$          | Physiological state |
+| $N$    | $n$, $s$     | Neuronal activity, synaptic connectome |
+| $M$    |              |                                        |
+
+---
+
+- And the relations among them, e.g. $W \rightarrow B \rightarrow N \leftrightarrow M$
+- With sufficient precision and specificity
+- Across relevant spatial and temporal scales
+
+---
+
+```{r, fig.cap="Sejnowski et al. 2014", out.width="800px"}
+knitr::include_graphics("https://media.nature.com/lw926/nature-assets/neuro/journal/v17/n11/images/nn.3839-F1.jpg")
 ```
 
-## Challenges...
+---
 
-- Beyond qualitative dynamics
-- How to characterize the relevant state spaces
-- How to measure the relevant states (with sufficient resolution)
-- What is controlled: perceptual states (PCT) or actions (ecological psychologists, forward modelers)
+- Reconciling explanatory dialects
 
 ---
 
-<img src="img/powers-6.1.png" height=500px/>
+$$\dot{\mathbf{x}}=A(t)\mathbf{x}(t)+B(t)\mathbf{u}(t)$$
 
-[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)
-
-## And which tasks?
+$$\mathbf{y(t)}=C(t)\mathbf{y}(t)+D(t)\mathbf{u}(t)$$
 
 ---
 
-```{r, fig.cap="Krakauer et al., 2017"}
+```{r, out.width="900px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/1/12/Typical_State_Space_model.png")
+```
+
+---
+
+```{r, out.width="850px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg/1200px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg")
+```
+
+---
+
+```{r}
+knitr::include_graphics("https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg")
+```
+
+## Algorithms vs. Dynamics
+
+- [Van Gelder, 1995](http://dx.doi.org/10.2307/2941061)
+- How to regulate the speed of a steam engine?
+
+
+---
+
+```{r, out.width="800px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/9/9e/Maquina_vapor_Watt_ETSIIM.jpg")
+```
+
+<small>Watt steam engine</small>
+
+---
+
+```
+1. Measure the speed of the flywheel.
+2. Compare the actual speed against the desired speed.
+3. If there is no discrepancy, return to step 1. Otherwise,
+    a. measure the current steam pressure;
+    b. calculate the desired alteration in steam pressure;
+    c. calculate the necessary throttle valve adjustment.
+4. Make the throttle valve adjustment.
+5. Return to step 1. 
+```
+
+---
+
+```{r, out.height="600px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/1/1e/Centrifugal_governor.png")
+```
+
+## Why cybernetics, especially PCT?
+
+---
+
+- Reconciles ecological and computational approaches
+- Hierarchical/nested control systems commonplace
+- Plausible mechanism for development
+
+---
+
+- More transparent mapping onto physical substrates
+- Scheme for visualizing sequential processes
+
+---
+
+```{r, out.width="550px"}
+knitr::include_graphics("img/powers-6.1.png")
+```
+
+<small>[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)</small>
+
+---
+
+- Changing zeitgeist?
+
+---
+
+```{r, out.width="800px"}
 knitr::include_graphics("img/krakauer.jpg")
 ```
 
 ---
 
-```{r, fig.cap="Krakauer et al., 2017"}
+```{r, out.width="750px"}
 knitr::include_graphics("https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr1.jpg")
 ```
 
+<small>Krakauer et al. 2017</small>
+
+# Getting there from here
+
 ---
 
-- *Deep* computational theories of tasks
+- *Deep* and *complete* computational theories of tasks
 - Amenable to control theory analyses
-
-# Sharing to accumulate knowledge
+- Complexity before simplicity
 
 ## We don't have to share toothbrushes...
 
-- But we can share our data, our code, our materials, and our procedures
-- In **F**indable, **A**ccessible, **I**nteroperable, and **R**eproducible ways [@Wilkinson2016-qr]
+---
 
-## Two failures
+- But we can share our data, our code, our materials, and our procedures
+- In **F**indable, **A**ccessible, **I**nteroperable, and **R**eproducible ways (Wilkinson et al. 2016)
+
+## Make knowable unknowns
+
+---
 
 - What behaviors are most commonly measured in child development research?
 
 ---
 
-What is the developmental trajectory of sensitivity to motion?
+What is the developmental trajectory of sensitivity to motion? 
 
-<iframe src="https://www.frontiersin.org/articles/10.3389/fnint.2015.00049/full" width=1000 height=600>
-</iframe>
-
-[@Hadad2015-qd]
+(Hadad et al., 2015)
 
 ---
 
@@ -635,20 +741,48 @@ knitr::include_graphics("https://www.frontiersin.org/files/Articles/145704/fnint
 
 ---
 
-All of the prior studies that used the X paradigm were openly shared in formats you could use to calculate *a priori* distributions.
+All of the prior studies that used the X paradigm were openly shared in formats you could use to calculate *a priori* distributions for your variables of interest.
 
 ---
 
 The display code used for a study you wanted to replicate was readily available so you could verify the parameters used and make decisions for your planned replication.
 
-## Take homes
+---
 
-- Psychology is a hard science
-- Psychology involves multiple, hierarchically nested and circular control systems
-- Cybernetics can help illuminate these
-- A commitment to transparency, openness, and sharing can accelerate progress in psychological research
+```{r, out.width="600px"}
+knitr::include_graphics("https://images-na.ssl-images-amazon.com/images/I/51eZRbjkr0L._SX425_.jpg")
+```
 
-# Thank you
+---
+
+```{r, out.width="600px"}
+knitr::include_graphics("https://store-images.s-microsoft.com/image/apps.34543.13914573398096857.0633d4e9-89b8-42e6-b9dd-45f3a13988bc.1b85edd5-6a5c-4c63-ba18-1ed5231cb9f8?mode=scale&q=90&h=270&w=270&background=%23FFFFFF")
+```
+
+---
+
+<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px>
+
+<!-- Blind men ->
+
+---
+
+<div class="centered">
+<img src="http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg" height=500px>
+
+<!-- Girl hugging elephant -->
+
+# Take homes
+
+---
+
+- Psychology is a really hard science
+- Multiple, hierarchically nested and circular control systems are required
+
+---
+
+- Cybernetic approaches can help illuminate
+- A commitment to transparency, openness, and sharing will accelerate progress
 
 ---
 
@@ -656,27 +790,29 @@ The display code used for a study you wanted to replicate was readily available 
   <source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
   </video>
 
+<small>
 rogilmore@psu.edu
 
 <https://gilmore-lab.github.io>
 
 <https://psu-psychology.github.io/cog-bbag-2019-2020/2019-11-13-gilmore.html/>
+</small>
 
 ---
 
-# Resources
-
-## Software
-
+<small>
 This talk was produced on `r Sys.Date()` in [RStudio](http://rstudio.com) version using R Markdown and the reveal.JS framework.
 The code and materials used to generate the slides may be found at <https://psu-psychology.github.io/cog-bbag-2019-2020/2019-11-13-gilmore.html/>.
+</small>
 
 ---
 
+<small>
 Information about the R Session that produced the code is as follows:
+</small>
 
 ```{r session-info}
 sessionInfo()
 ```
 
-## References
+
