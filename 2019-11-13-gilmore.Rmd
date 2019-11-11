@@ -22,8 +22,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, 
                       message = FALSE,
-                      fig.align = "center",
-                      out.width = "600px")
+                      fig.align = "center")
 library(databraryapi)
 login_db("rogilmore@psu.edu")
 ```
@@ -82,7 +81,7 @@ login_db("rogilmore@psu.edu")
 ---
 
 - Mind ($M$) within nervous system ($N$)
-- Nervous system ($N$) within body ($N$)
+- Nervous system ($N$) within body ($B$)
 - Body ($B$) within world ($W$)
 
 ## Mutual coupling of dynamic states
@@ -106,11 +105,9 @@ $\dot{W} = f(W,B)$
 
 ---
 
-<a href="">
-<img src="https://media.nature.com/lw926/nature-assets/neuro/journal/v17/n11/images/nn.3839-F1.jpg" height=500px/>
-</a>
-
-[Sejnowski, Churchland, & Movshon, 2014](http://doi.org/10.1038/nn.3839)
+```{r, fig.cap="Sejnowski et al. 2014", out.width="800px"}
+knitr::include_graphics("https://media.nature.com/lw926/nature-assets/neuro/journal/v17/n11/images/nn.3839-F1.jpg")
+```
 
 ## but measure...
 
@@ -124,22 +121,23 @@ $\dot{W} = f(W,B)$
 ---
 
 
-```{r}
+```{r, out.width="800px"}
 knitr::include_graphics("https://static.boredpanda.com/blog/wp-content/uploads/2018/07/arctic-fox-rescued-iceberg-canada-harrigan-russell-1-5b39d097f2b83__700.jpg")
 ```
 <!-- Fox on an iceberg. Like iceberg, belies bulk below. -->
 
 ---
 
-```{r}
+```{r, out.width="1000px"}
 knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/7/7c/Blackbox3D-withGraphs.png")
 ```
 <!-- Black Box -->
 
 ---
 
-<img src="https://images-na.ssl-images-amazon.com/images/I/41Pe93nMvcL._SX331_BO1,204,203,200_.jpg" height=500px/>
-<!-- Ashby's Cybernetics -->
+```{r, out.height="600px"}
+knitr::include_graphics("https://images-na.ssl-images-amazon.com/images/I/41Pe93nMvcL._SX331_BO1,204,203,200_.jpg")
+```
 
 ---
 
@@ -148,21 +146,37 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/7/7c/Bla
 
 ---
 
-<p><a href="https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg#/media/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg/1200px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg" alt="Pieter Bruegel the Elder - The Tower of Babel (Vienna) - Google Art Project.jpg" height=500px></a><br>By <a href="https://en.wikipedia.org/wiki/en:Pieter_Bruegel_the_Elder" class="extiw" title="w:en:Pieter Bruegel the Elder">Pieter Brueghel the Elder</a> - <a rel="nofollow" class="external text" href="//www.google.com/culturalinstitute/asset-viewer/bAGKOdJfvfAhYQ">bAGKOdJfvfAhYQ at Google Cultural Institute</a> zoom level Scaled down from second-highest, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=22178101">Link</a></p>
+```{r, fig.cap="Wikipedia", out.width="850px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg/1200px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg")
+```
 
 ---
 
-<img src="https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg" height=600px/>
+```{r}
+knitr::include_graphics("https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg")
+```
 
 ---
 
-> "*...psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.*"
+> "*...psychologists tend to treat other peoples’ theories like toothbrushes;*"
 
 <small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
 
 ---
 
-> "*The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing, rather than building on each other’s directly relevant best work.*"
+>"*no self-respecting individual wants to use anyone else’s.*"
+
+<small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
+
+---
+
+> "*The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing...*
+
+<small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
+
+---
+
+>"*rather than building on each other’s directly relevant best work.*"
 
 <small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
 
@@ -224,53 +238,60 @@ knitr::include_graphics("https://img.thedailybeast.com/image/upload/c_crop,d_pla
 | known-knowns | known-unknowns |
 | **unknown-knowns** | unknown-unknowns |
 
->"*Reports that say that something hasn't happened are always interesting to me, because as we know, there are known knowns; there are things we know we know.*" 
+---
 
-<https://en.wikipedia.org/wiki/There_are_known_knowns>
+>"*Reports that say that something hasn't happened are always interesting to me...*"
+
+<small><https://en.wikipedia.org/wiki/There_are_known_knowns></small>
+
+---
+
+>"*because as we know, there are known knowns; there are things we know we know.*" 
+
+<small><https://en.wikipedia.org/wiki/There_are_known_knowns></small>
 
 ---
 
 >"*We also know there are known unknowns; that is to say we know there are some things we do not know.*" 
 
-<https://en.wikipedia.org/wiki/There_are_known_knowns>
+<small><https://en.wikipedia.org/wiki/There_are_known_knowns></small>
 
 ---
 
->"*But there are also unknown unknowns—the ones we don't know we don't know. And if one looks throughout the history of our country and other free countries, it is the latter category that tend to be the difficult ones.*"
+>"*But there are also unknown unknowns—the ones we don't know we don't know.*"
 
-<https://en.wikipedia.org/wiki/There_are_known_knowns>
+<small><https://en.wikipedia.org/wiki/There_are_known_knowns></small>
+
+---
+
+>"*And...it is the latter category that tend to be the difficult ones.*"
+
+<small><https://en.wikipedia.org/wiki/There_are_known_knowns></small>
 
 
 ## What are psychology's unknown-knowns?
-
-<!-- --- -->
-
-<!-- - Recall our unknown-knowns -->
-<!-- - Embrace complexity -->
-<!-- - Restore behavior -->
-<!-- - Accumulate and share knowledge in re-discoverable ways -->
 
 # Back to the Future
 
 ---
 
-```{r cybernetics-wiener, fig.cap="Wiener, 1948"}
+```{r cybernetics-wiener, out.height="600px"}
 knitr::include_graphics("https://images-na.ssl-images-amazon.com/images/I/41856FswfLL._SX317_BO1,204,203,200_.jpg")
 ```
 
 ---
 
-```{r ashby-cybernetics, fig.cap="Ashby, 1961"}
+```{r ashby-cybernetics, out.height="600px"}
 knitr::include_graphics("https://images-na.ssl-images-amazon.com/images/I/41Pe93nMvcL._SX331_BO1,204,203,200_.jpg")
 ```
 
 ---
 
-```{r macy-conferences}
+```{r macy-conferences, out.width="900px"}
 knitr::include_graphics("img/macy-conferences-asc.jpg")
 ```
 
-<https://en.wikipedia.org/wiki/Macy_conferences>
+<small><https://en.wikipedia.org/wiki/Macy_conferences></small>
 
 ---
 
@@ -288,25 +309,74 @@ knitr::include_graphics("img/macy-conferences-asc.jpg")
 - Self-regulating and teleological mechanisms
 - Simulated neural networks emulating the calculus of propositional logic
 - Anthropology and how computers might learn how to learn
-- Object perception's feedback mechanisms
 
 ---
 
+- Object perception's feedback mechanisms
 - Analog vs. digital approaches to psychological models
 - Are the number of neurons and their connections sufficient to account for human capacities?
+
+---
+
 - Studies on the activity of the brain
-- Meaning in language and how its acquired
+- Meaning in language and how it's acquired
 
 ---
 
 ```{r}
 knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/7/7c/Blackbox3D-withGraphs.png")
 ```
-<!-- Black Box -->
 
 ---
 
-```{r state-space, fig.cap="Wikipedia: <https://en.wikipedia.org/wiki/State-space_representation>"}
+> "*How should an experimenter proceed when faced with a black box?*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
+---
+
+> "*What properties of the Box's contents are discoverable and what are fundamentally not discoverable?*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
+---
+
+> "*What methods should be used if the Box is to be investigated efficiently?*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+---
+
+> "*The primary data of any investigation of a Black Box consists of a sequence of values of the vector with two components: (input state, output state).*"
+
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/5
+
+---
+
+> "*From this there follows the fundamental deduction that all fundamental knowledge obtainable from a Black Box...*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
+---
+
+>"*...is such as can be obtained by re-coding the protocol [sequence of input/output measurements].*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
+---
+
+> "*The theory of the Black Box is simply the study of the relations between the experimenter and his environment, when special attention is given to the flow of information.*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
+---
+
+```{r state-space, out.width="900px", fig.cap="Wikipedia"}
 knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/1/12/Typical_State_Space_model.png")
 ```
 
@@ -335,9 +405,7 @@ $$\mathbf{y(t)}=C(t)\mathbf{y(t)}+D(t)\mathbf{u(t)}$$
 | $\dot{x}=\alpha x(1-\frac{x}{k})$ | growth |
 | $\dot{x}=\alpha + \beta x - x^3$ | step-wise change |  
 
-Nilam Ram
-
-[@Lerner2015-qd]
+<small>Nilam Ram</small>
 
 ---
 
@@ -346,7 +414,7 @@ Nilam Ram
 
 ---
 
-```{r state-space-w-feedback, fig.cap="Wikipedia, <https://en.wikipedia.org/wiki/State-space_representation>"}
+```{r state-space-w-feedback, out.width="900px"}
 knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/6/66/Typical_State_Space_model_with_feedback_and_input.png")
 ```
 
@@ -358,9 +426,11 @@ knitr::include_graphics("https://img.grepmed.com/uploads/3943/thermoregulatory-b
 
 ---
 
-```{r postural-control, fig.cap="[@Kim2009-pc]"}
+```{r postural-control}
 knitr::include_graphics("https://www.physiology.org/na101/home/literatum/publisher/physio/journals/content/jn/2009/jn.2009.102.issue-5/jn.00206.2009/production/images/medium/z9k0110997760001.jpeg")
 ```
+
+<small>Kim 2009</small>
 
 ---
 
@@ -370,45 +440,49 @@ knitr::include_graphics("https://www.sfu.ca/content/sfu/aerospacelab/research-ar
 
 ---
 
-```{r myotatic-reflex, fig.cap="http://studyingmed.com/wiki/index.php?title=AEB/Lectures/Motor_system_1:_reflex_control_of_movement&mobileaction=toggle_view_mobile"}
+```{r myotatic-reflex, out.width="900px"}
 knitr::include_graphics("http://studyingmed.com/wiki/images/b/b2/Reflex.png")
 ```
 
 ---
 
-```{r locomotion-steering, fig.cap="[@Fajen2007-pv]"}
+```{r locomotion-steering, out.width="700px"}
 knitr::include_graphics("https://media.springernature.com/lw785/springer-static/image/art%3A10.1007%2Fs00221-007-0859-6/MediaObjects/221_2007_859_Fig1_HTML.gif")
 ```
 
+<small>Fajen & Warren 2007</small>
+
 ---
 
-```{r vor, fig.cap="https://en.wikipedia.org/wiki/Vestibulo%E2%80%93ocular_reflex"}
+```{r vor, out.width="700px"}
 knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Simple_vestibulo-ocular_reflex.PNG/450px-Simple_vestibulo-ocular_reflex.PNG")
 ```
 
 ---
 
-```{r visual-pursuit, fig.cap="[@Korentis2016-dt]"}
+```{r visual-pursuit, out.height="600px"}
 knitr::include_graphics("https://www.omicsonline.org/articles-images/bioengineering-biomedical-science-Switching-control-methodology-6-192-g006.png")
 ```
 
+<small>Korentis 2016</small>
+
 ---
 
-```{r visuo-motor-pursuit}
+```{r visuo-motor-pursuit, out.width="600px"}
 knitr::include_graphics("img/powers-5.1.png")
 ```
 
-[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)
+<small>[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)</small>
 
 ---
 
-```{r accommodation-lens, fig.cap="https://www.onlinebiologynotes.com/physiology-of-vision/"}
+```{r accommodation-lens, out.width="800px"}
 knitr::include_graphics("https://www.onlinebiologynotes.com/wp-content/uploads/2018/01/accommodation.jpg")
 ```
 
 ---
 
-```{r accommodation-circuit, fig.cap="https://www.onlinebiologynotes.com/physiology-of-vision/"}
+```{r accommodation-circuit, out.width="800px"}
 knitr::include_graphics("https://www.onlinebiologynotes.com/wp-content/uploads/2018/01/eye-brain.jpg")
 ```
 
@@ -419,31 +493,28 @@ knitr::include_graphics("https://www.onlinebiologynotes.com/wp-content/uploads/2
 | radial optic flow   | forward/backward translation |
 | rotational optic flow | rotation around optic axis |
 | linear optic flow     | eye/head/body rotation/translation |
+
+---
+
+| perceptual variable | information provided |
+|---------------------|----------------------|
 | utricle/saccule activity | linear translation/acceleration |
 | semicircular canal activity | head/body rotation | 
 | kinesthetic information   | head/body translation/rotation |
 
 ---
 
-```{r senses-considered}
+```{r senses-considered, out.height="600px"}
 knitr::include_graphics("https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1356453602l/378571.jpg")
 ```
 
 ---
 
-<div class="centered">
-<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=500px/>
+```{r}
+knitr::include_graphics("https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg")
+```
 
-[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
-</div>
-
----
-
-<div class="centered">
-<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-3.jpg" height=500px/>
-
-[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
-</div>
+<small>[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)</small>
 
 ---
 
@@ -451,21 +522,27 @@ knitr::include_graphics("https://i.gr-assets.com/images/S/compressed.photo.goodr
 
 ---
 
-<img src="https://images-na.ssl-images-amazon.com/images/I/41D4paZ+vbL._US230_.jpg"/>
+```{r, out.width="600px"}
+knitr::include_graphics("https://images-na.ssl-images-amazon.com/images/I/41D4paZ+vbL._US230_.jpg")
+```
 
-William T. Powers
-
----
-
-<img src="img/powers-5.2.png" height=500px/>
-
-[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)
+<small>William T. Powers</small>
 
 ---
 
-<img src="https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg" height=500px/>
+```{r, out.width="600px"}
+knitr::include_graphics("img/powers-5.2.png")
+```
 
-[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)
+<small>[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)</small>
+
+---
+
+```{r, out.width="900px"}
+knitr::include_graphics("https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg")
+```
+
+<small>[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)</small>
 
 ## Tenets of PCT
 
@@ -475,28 +552,33 @@ William T. Powers
 
 ---
 
-<img src="https://ars.els-cdn.com/content/image/1-s2.0-S1383762112000586-gr1.jpg" height=500px/>
+```{r, out.height="600px"}
+knitr::include_graphics("https://ars.els-cdn.com/content/image/1-s2.0-S1383762112000586-gr1.jpg")
+```
 
-[Wang et al. 2012](https://doi.org/10.1016/j.sysarc.2012.06.004)
+<small>[Wang et al. 2012](https://doi.org/10.1016/j.sysarc.2012.06.004)</small>
 
 ## Related approaches
 
-- Dynamic Systems Theory (DST) (Van Gelder)
 - Ecological Psychology (e.g., Gibson, Turvey)
 - Forward models/predictive control (e.g., Shadmehr & Mussa-Ivaldi; Wolpert)
 - Cognitive control/executive functions
 - Reafference, Helmholtzian 'unconscious inference'
+- Embodied cognition
+- Dynamic Systems Theory (DST) (Van Gelder; Thelen & Smith; Beer; Warren)
 
-## What is being controlled?
+---
 
-- Control illustrates the purposive dimension of behavior (Tolman)
-- Perceptual states (PCT) vs. actions (Ecological psychologists, forward modelers)
-- Mappings from $S \rightarrow R$ and $C \rightarrow C$ (cognitive control/executive functions)
+```{r,fig.cap="[Hotton & Yoshimi 2010](https://doi.org/10.1111/j.1551-6709.2010.01151.x)"}
+knitr::include_graphics("img/hotton-yoshimi-2010.jpg")
+```
 
 ## Challenges...
 
-- Characterizing the relevant state spaces
-- Measuring the relevant states (with sufficient resolution)
+- Beyond qualitative dynamics
+- How to characterize the relevant state spaces
+- How to measure the relevant states (with sufficient resolution)
+- What is controlled: perceptual states (PCT) or actions (ecological psychologists, forward modelers)
 
 ---
 
@@ -504,7 +586,7 @@ William T. Powers
 
 [Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)
 
-## But which tasks?
+## And which tasks?
 
 ---
 
@@ -520,27 +602,8 @@ knitr::include_graphics("https://ars.els-cdn.com/content/image/1-s2.0-S089662731
 
 ---
 
-- Deep computational theories of tasks
+- *Deep* computational theories of tasks
 - Amenable to control theory analyses
-
-<!-- ## Characterizing $W$ -->
-
-<!-- - Natural scene statistics -->
-<!-- - Language corpora (e.g., TalkBank) -->
-<!-- - Statistical learning -->
-<!-- - PLAY project -->
-
-<!-- ## Characterizing $B$ and $\dot{B}$ -->
-
-<!-- - Physiological states -->
-<!-- - Behaviors -->
-
-<!-- --- -->
-
-<!-- <iframe src="https://www.apa.org/science/about/psa/2017/10/video-data" width=1000 height=600> -->
-<!-- </iframe> -->
-
-<!-- [@Adolph_KE_Gilmore_RO_Kennedy_JL2017-va] -->
 
 # Sharing to accumulate knowledge
 
