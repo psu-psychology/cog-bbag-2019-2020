@@ -65,6 +65,14 @@ login_db("rogilmore@psu.edu")
 
 ---
 
+```{r}
+knitr::include_graphics("img/beer-2003-fig-1.jpg")
+```
+
+Beer 2003
+
+---
+
 <img src="img/nested-causality.jpeg" height=500px/>
 
 ---
@@ -704,12 +712,62 @@ knitr::include_graphics("https://ars.els-cdn.com/content/image/1-s2.0-S089662731
 
 <small>Krakauer et al. 2017</small>
 
+---
+
+However...
+
+---
+
+```{r, out.width="700px"}
+knitr::include_graphics("img/beer-2003-fig-2.jpg")
+```
+
+---
+
+```{r, out.width="600px"}
+knitr::include_graphics("img/beer-2003-fig-12.jpg")
+```
+
+---
+
+>"*As with any feed- back system, it can be very difficult to disentangle cause and effect. Effects 'play through the system' to become causes.*"
+
+---
+
+>"*...we may need to modify our expectations regarding the demands we can reasonably place upon a componential explanation...*"
+
+
+---
+
+>"*stemming from the simple fact that the agent and its environment are really just two components of a single larger system.*"
+
+---
+
+>"*there are clearly many challenges facing a dynamical approach to cognition...it is still quite impossible to fully visualize or characterize its complete 16-dimensional dynamics.*"
+
+---
+
+>"*There is no question that the patterns of activity of the interneurons play a key role in the operation of the agent analyzed here, but is this role best understood as a representational one?*"
+
 # Getting there from here
+
+---
+
+>"*In response to a question about the relevance of thinking of the brain as a complex dynamical system...*"
+
+---
+
+>"*the philosopher of mind Patricia Churchland once replied 'It’s obviously true, but so what? Then what is your research program?'*"
+
+<small>
+Lewin 1992 in Beer 2003
+</small>
 
 ---
 
 - *Deep* and *complete* computational theories of tasks
 - Amenable to control theory analyses
+- Beyond ordinal predictions
 - Complexity before simplicity
 
 ## We don't have to share toothbrushes...
