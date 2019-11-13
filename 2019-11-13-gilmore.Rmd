@@ -23,8 +23,8 @@ output:
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, 
                       message = FALSE,
                       fig.align = "center")
-library(databraryapi)
-login_db("rogilmore@psu.edu")
+#library(databraryapi)
+#login_db("rogilmore@psu.edu")
 ```
 
 # Preliminaries
@@ -820,14 +820,15 @@ knitr::include_graphics("https://store-images.s-microsoft.com/image/apps.34543.1
 
 ---
 
-<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px>
-
-<!-- Blind men ->
+```{r}
+knitr::include_graphics("http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg")
+```
 
 ---
 
-<div class="centered">
-<img src="http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg" height=500px>
+```{r}
+knitr::include_graphics("http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg")
+```
 
 <!-- Girl hugging elephant -->
 
