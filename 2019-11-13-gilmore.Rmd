@@ -22,8 +22,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, 
                       message = FALSE,
-                      fig.align = "center",
-                      out.width = "850px")
+                      fig.align = "center")
 library(databraryapi)
 login_db("rogilmore@psu.edu")
 ```
@@ -50,8 +49,7 @@ login_db("rogilmore@psu.edu")
 
 - Psychology is harder than physics
 - But why?
-- What to do about it?
-- State spaces
+- What to do?
 
 # Psychology is harder than physics
 
@@ -64,6 +62,14 @@ login_db("rogilmore@psu.edu")
 <img src="img/psych-harder-2.jpg" height=500px/>
 
 # But why?
+
+---
+
+```{r}
+knitr::include_graphics("img/beer-2003-fig-1.jpg")
+```
+
+Beer 2003
 
 ---
 
@@ -83,7 +89,7 @@ login_db("rogilmore@psu.edu")
 ---
 
 - Mind ($M$) within nervous system ($N$)
-- Nervous system ($N$) within body ($N$)
+- Nervous system ($N$) within body ($B$)
 - Body ($B$) within world ($W$)
 
 ## Mutual coupling of dynamic states
@@ -107,11 +113,9 @@ $\dot{W} = f(W,B)$
 
 ---
 
-<a href="">
-<img src="https://media.nature.com/lw926/nature-assets/neuro/journal/v17/n11/images/nn.3839-F1.jpg" height=500px/>
-</a>
-
-[Sejnowski, Churchland, & Movshon, 2014](http://doi.org/10.1038/nn.3839)
+```{r, fig.cap="Sejnowski et al. 2014", out.width="800px"}
+knitr::include_graphics("https://media.nature.com/lw926/nature-assets/neuro/journal/v17/n11/images/nn.3839-F1.jpg")
+```
 
 ## but measure...
 
@@ -125,83 +129,99 @@ $\dot{W} = f(W,B)$
 ---
 
 
-```{r}
+```{r, out.width="800px"}
 knitr::include_graphics("https://static.boredpanda.com/blog/wp-content/uploads/2018/07/arctic-fox-rescued-iceberg-canada-harrigan-russell-1-5b39d097f2b83__700.jpg")
 ```
 <!-- Fox on an iceberg. Like iceberg, belies bulk below. -->
 
 ---
 
-```{r}
+```{r, out.width="1000px"}
 knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/7/7c/Blackbox3D-withGraphs.png")
 ```
 <!-- Black Box -->
 
 ---
 
-<img src="https://images-na.ssl-images-amazon.com/images/I/41Pe93nMvcL._SX331_BO1,204,203,200_.jpg" height=500px/>
-<!-- Ashby's Cybernetics -->
+```{r, out.height="600px"}
+knitr::include_graphics("https://images-na.ssl-images-amazon.com/images/I/41Pe93nMvcL._SX331_BO1,204,203,200_.jpg")
+```
 
 ---
 
 <img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px>
-
 <!-- The whole elephant -->
 
 ---
 
-<p><a href="https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg#/media/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg/1200px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg" alt="Pieter Bruegel the Elder - The Tower of Babel (Vienna) - Google Art Project.jpg" height=500px></a><br>By <a href="https://en.wikipedia.org/wiki/en:Pieter_Bruegel_the_Elder" class="extiw" title="w:en:Pieter Bruegel the Elder">Pieter Brueghel the Elder</a> - <a rel="nofollow" class="external text" href="//www.google.com/culturalinstitute/asset-viewer/bAGKOdJfvfAhYQ">bAGKOdJfvfAhYQ at Google Cultural Institute</a> zoom level Scaled down from second-highest, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=22178101">Link</a></p>
+```{r, fig.cap="Wikipedia", out.width="850px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg/1200px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg")
+```
 
 ---
 
-<img src="https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg" height=600px/>
+```{r}
+knitr::include_graphics("https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg")
+```
 
 ---
 
-> "*...psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.*"
+> "*...psychologists tend to treat other peoples’ theories like toothbrushes;*"
 
 <small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
 
 ---
 
-> "*The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing, rather than building on each other’s directly relevant best work.*"
+>"*no self-respecting individual wants to use anyone else’s.*"
 
 <small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
 
-## Oh give me a 'ome...
+---
 
-- [Genome](https://www.genome.gov/12011238/an-overview-of-the-human-genome-project/)
-- [Proteome](https://hupo.org/human-proteome-project)
-- [Metabolome](http://www.hmdb.ca/)
-- [Connectome](http://www.humanconnectomeproject.org/)
+> "*The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing...*
+
+<small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
 
 ---
 
->"*Behavior is the linchpin of the most vexing problems in public health, and a better understanding of behavior is fundamental to achieving positive health outcomes, from prenatal development throughout adulthood.*"
+>"*rather than building on each other’s directly relevant best work.*"
 
-[Gilmore, Adolph, & Tamis-LeMonda, 2019](https://www.rick-gilmore.com/post/behavior-is-the-linchpin/)
+<small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
 
----
+<!-- ## Oh give me a 'ome... -->
 
->"*Behavior contributes to the progression or prevention of disease, defines a disorder or marks recovery, and provides mechanisms for therapeutic intervention.*"
+<!-- - [Genome](https://www.genome.gov/12011238/an-overview-of-the-human-genome-project/) -->
+<!-- - [Proteome](https://hupo.org/human-proteome-project) -->
+<!-- - [Metabolome](http://www.hmdb.ca/) -->
+<!-- - [Connectome](http://www.humanconnectomeproject.org/) -->
 
-[Gilmore, Adolph, & Tamis-LeMonda, 2019](https://www.rick-gilmore.com/post/behavior-is-the-linchpin/)
+<!-- --- -->
 
-## What about a 'behaviorome'?
+<!-- >"*Behavior is the linchpin of the most vexing problems in public health, and a better understanding of behavior is fundamental to achieving positive health outcomes, from prenatal development throughout adulthood.*" -->
 
----
+<!-- [Gilmore, Adolph, & Tamis-LeMonda, 2019](https://www.rick-gilmore.com/post/behavior-is-the-linchpin/) -->
 
-<iframe src="http://mousebehavior.org/" width=800 height=600>
-</iframe>
+<!-- --- -->
 
-<https://mousebehavior.org/>
+<!-- >"*Behavior contributes to the progression or prevention of disease, defines a disorder or marks recovery, and provides mechanisms for therapeutic intervention.*" -->
 
----
+<!-- [Gilmore, Adolph, & Tamis-LeMonda, 2019](https://www.rick-gilmore.com/post/behavior-is-the-linchpin/) -->
 
-<iframe src="https://play-project.org/" width=1000 height=600>
-</iframe>
+<!-- ## What about a 'behaviorome'? -->
 
-<https://play-project.org>
+<!-- --- -->
+
+<!-- <iframe src="http://mousebehavior.org/" width=800 height=600> -->
+<!-- </iframe> -->
+
+<!-- <https://mousebehavior.org/> -->
+
+<!-- --- -->
+
+<!-- <iframe src="https://play-project.org/" width=1000 height=600> -->
+<!-- </iframe> -->
+
+<!-- <https://play-project.org> -->
 
 
 ## The 'Rumsfeldian' space of knowledge
@@ -226,84 +246,549 @@ knitr::include_graphics("https://img.thedailybeast.com/image/upload/c_crop,d_pla
 | known-knowns | known-unknowns |
 | **unknown-knowns** | unknown-unknowns |
 
-## What are psychology's unknown-knowns?
+---
 
-# How to proceed?
+>"*Reports that say that something hasn't happened are always interesting to me...*"
 
-<!-- --- -->
-
-<!-- - Recall our unknown-knowns -->
-<!-- - Embrace complexity -->
-<!-- - Restore behavior -->
-<!-- - Accumulate and share knowledge in re-discoverable ways -->
-
-## Back to the Future
-
-- Origins (Wiener and Ashby)
-- State spaces and transitions between them (aka dynamics)
-- Black boxes
-- Senses are perceptual systems
-- Analog vs. algorithmic control
-- Perceptual control theory (Powers) or hierarchies of control
-- A neural architecture for perceptual control (Swanson)
-- Neuroscience needs behavior
-- How do we capture state spaces?
-- Complexity before simplicity
-
-## Characterizing $W$
-
-- Natural scene statistics
-- Language corpora (e.g., TalkBank)
-- Statistical learning
-- PLAY project
-
-## Characterizing $B$ and $\dot{B}$
-
-- Behavior
-- Physiological states
-
-## Behavior
-
-- Body, eye position
-- Vocalization
+<small><https://en.wikipedia.org/wiki/There_are_known_knowns></small>
 
 ---
 
-<iframe src="https://www.apa.org/science/about/psa/2017/10/video-data" width=1000 height=600>
-</iframe>
+>"*because as we know, there are known knowns; there are things we know we know.*" 
 
-[@Adolph_KE_Gilmore_RO_Kennedy_JL2017-va]
+<small><https://en.wikipedia.org/wiki/There_are_known_knowns></small>
 
-## Physiological states
+---
 
-- Autonomic (HR, respiration)
-- Pupillary responses
-- Endocrine
-- EMG/EGG
+>"*We also know there are known unknowns; that is to say we know there are some things we do not know.*" 
 
-## Characterizing $N$
+<small><https://en.wikipedia.org/wiki/There_are_known_knowns></small>
 
-## Network science as a representation of state spaces
+---
 
-# Sharing to accumulate knowledge
+>"*But there are also unknown unknowns—the ones we don't know we don't know.*"
+
+<small><https://en.wikipedia.org/wiki/There_are_known_knowns></small>
+
+---
+
+>"*And...it is the latter category that tend to be the difficult ones.*"
+
+<small><https://en.wikipedia.org/wiki/There_are_known_knowns></small>
+
+
+## What are psychology's unknown-knowns?
+
+# Back to the Future
+
+---
+
+```{r cybernetics-wiener, out.height="600px"}
+knitr::include_graphics("https://images-na.ssl-images-amazon.com/images/I/41856FswfLL._SX317_BO1,204,203,200_.jpg")
+```
+
+---
+
+```{r ashby-cybernetics, out.height="600px"}
+knitr::include_graphics("https://images-na.ssl-images-amazon.com/images/I/41Pe93nMvcL._SX331_BO1,204,203,200_.jpg")
+```
+
+---
+
+```{r macy-conferences, out.width="900px"}
+knitr::include_graphics("img/macy-conferences-asc.jpg")
+```
+
+<small><https://en.wikipedia.org/wiki/Macy_conferences></small>
+
+---
+
+- Warren McCulloch
+- Norbert Wiener
+- W. Ross Ashby
+- Claude Shannon
+- John Von Neumann
+- Duncan Luce
+- Margaret Mead
+- Gregory Bateson`
+
+---
+
+- Self-regulating and teleological mechanisms
+- Simulated neural networks emulating the calculus of propositional logic
+- Anthropology and how computers might learn how to learn
+
+---
+
+- Object perception's feedback mechanisms
+- Analog vs. digital approaches to psychological models
+- Are the number of neurons and their connections sufficient to account for human capacities?
+
+---
+
+- Studies on the activity of the brain
+- Meaning in language and how it's acquired
+
+---
+
+```{r}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/7/7c/Blackbox3D-withGraphs.png")
+```
+
+---
+
+> "*How should an experimenter proceed when faced with a black box?*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
+---
+
+> "*What properties of the Box's contents are discoverable and what are fundamentally not discoverable?*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
+---
+
+> "*What methods should be used if the Box is to be investigated efficiently?*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
+---
+
+> "*The primary data of any investigation of a Black Box consists of a sequence of values of the vector with two components: (input state, output state).*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
+---
+
+> "*From this there follows the fundamental deduction that all fundamental knowledge obtainable from a Black Box...*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
+---
+
+>"*...is such as can be obtained by re-coding the protocol [sequence of input/output measurements].*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
+---
+
+> "*The theory of the Black Box is simply the study of the relations between the experimenter and his environment, when special attention is given to the flow of information.*"
+
+<small>
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2</small>
+
+---
+
+```{r state-space, out.width="900px", fig.cap="Wikipedia"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/1/12/Typical_State_Space_model.png")
+```
+
+---
+
+| component | interpretation |
+|-----------|----------------|
+| $x(.)$  | state vector   |
+| $x(.)$  | output vector  |
+| $u(.)$  | control vector |
+
+---
+
+$$\dot{\mathbf{x}}=A(t)\mathbf{x(t)}+B(t)\mathbf{u(t)}$$
+
+$$\mathbf{y(t)}=C(t)\mathbf{y(t)}+D(t)\mathbf{u(t)}$$
+
+## Dynamical systems are everywhere
+
+---
+
+| equation              | description |
+|-----------------------|-------------|
+| $\dot{x}=\sigma dW$ | stochastic variability |
+| $\ddot{x}=\beta x$  | oscillatory |
+| $\dot{x}=\alpha x(1-\frac{x}{k})$ | growth |
+| $\dot{x}=\alpha + \beta x - x^3$ | step-wise change |  
+
+<small>Nilam Ram</small>
+
+---
+
+- What are the relevant state space variables?
+- What is being controlled?
+
+---
+
+```{r state-space-w-feedback, out.width="900px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/6/66/Typical_State_Space_model_with_feedback_and_input.png")
+```
+
+---
+
+```{r thermoregulation}
+knitr::include_graphics("https://img.grepmed.com/uploads/3943/thermoregulatory-body-core-pathophysiology-thermoregulation-original.jpeg")
+```
+
+---
+
+```{r postural-control}
+knitr::include_graphics("https://www.physiology.org/na101/home/literatum/publisher/physio/journals/content/jn/2009/jn.2009.102.issue-5/jn.00206.2009/production/images/medium/z9k0110997760001.jpeg")
+```
+
+<small>Kim 2009</small>
+
+---
+
+```{r cardio-postural-control, fig.cap="https://www.sfu.ca/aerospacelab/research-areas/cardio-postural-control.html"}
+knitr::include_graphics("https://www.sfu.ca/content/sfu/aerospacelab/research-areas/cardio-postural-control/jcr:content/main_content/image_0.img.2000.high.jpg")
+```
+
+---
+
+```{r myotatic-reflex, out.width="900px"}
+knitr::include_graphics("http://studyingmed.com/wiki/images/b/b2/Reflex.png")
+```
+
+---
+
+```{r locomotion-steering, out.width="700px"}
+knitr::include_graphics("https://media.springernature.com/lw785/springer-static/image/art%3A10.1007%2Fs00221-007-0859-6/MediaObjects/221_2007_859_Fig1_HTML.gif")
+```
+
+<small>Fajen & Warren 2007</small>
+
+---
+
+```{r vor, out.width="700px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Simple_vestibulo-ocular_reflex.PNG/450px-Simple_vestibulo-ocular_reflex.PNG")
+```
+
+---
+
+```{r visual-pursuit, out.height="600px"}
+knitr::include_graphics("https://www.omicsonline.org/articles-images/bioengineering-biomedical-science-Switching-control-methodology-6-192-g006.png")
+```
+
+<small>Korentis 2016</small>
+
+---
+
+```{r visuo-motor-pursuit, out.width="600px"}
+knitr::include_graphics("img/powers-5.1.png")
+```
+
+<small>[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)</small>
+
+---
+
+```{r accommodation-lens, out.width="800px"}
+knitr::include_graphics("https://www.onlinebiologynotes.com/wp-content/uploads/2018/01/accommodation.jpg")
+```
+
+---
+
+```{r accommodation-circuit, out.width="800px"}
+knitr::include_graphics("https://www.onlinebiologynotes.com/wp-content/uploads/2018/01/eye-brain.jpg")
+```
+
+---
+
+| perceptual variable | information provided |
+|---------------------|----------------------|
+| radial optic flow   | forward/backward translation |
+| rotational optic flow | rotation around optic axis |
+| linear optic flow     | eye/head/body rotation/translation |
+
+---
+
+| perceptual variable | information provided |
+|---------------------|----------------------|
+| utricle/saccule activity | linear translation/acceleration |
+| semicircular canal activity | head/body rotation | 
+| kinesthetic information   | head/body translation/rotation |
+
+---
+
+```{r senses-considered, out.height="600px"}
+knitr::include_graphics("https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1356453602l/378571.jpg")
+```
+
+---
+
+```{r}
+knitr::include_graphics("https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg")
+```
+
+<small>[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)</small>
+
+---
+
+## Perceptual Control Theory (PCT)
+
+---
+
+```{r, out.width="600px"}
+knitr::include_graphics("https://images-na.ssl-images-amazon.com/images/I/41D4paZ+vbL._US230_.jpg")
+```
+
+<small>William T. Powers</small>
+
+---
+
+```{r, out.width="600px"}
+knitr::include_graphics("img/powers-5.2.png")
+```
+
+<small>[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)</small>
+
+---
+
+```{r, out.width="900px"}
+knitr::include_graphics("https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg")
+```
+
+<small>[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)</small>
+
+## Tenets of PCT
+
+- *Perception* is the source of controlled variables
+- *Actions* control perception with respect to some referent signal
+- Nested hierarchies of perceptual control systems
+
+---
+
+```{r, out.height="600px"}
+knitr::include_graphics("https://ars.els-cdn.com/content/image/1-s2.0-S1383762112000586-gr1.jpg")
+```
+
+<small>[Wang et al. 2012](https://doi.org/10.1016/j.sysarc.2012.06.004)</small>
+
+## Related approaches
+
+- Reafference, Helmholtzian 'unconscious inference'
+- Ecological Psychology (e.g., Gibson, Turvey)
+- Forward models/predictive control (e.g., Shadmehr & Mussa-Ivaldi; Wolpert)
+
+---
+
+- Embodied cognition
+- Dynamic Systems Theory (DST) (Van Gelder; Thelen & Smith; Beer; Warren)
+
+## Challenges
+
+- Beyond the periphery (perception and action)
+- Do peripheral dynamics inform central ones?
+- Beyond qualitative dynamics
+
+---
+
+- How to characterize & measure the relevant state spaces
+
+---
+
+| Realm | State spaces | Description |
+|--------|--------------|-------------|
+| $W$    | $\Phi$       | Physical environment |
+|        | $\Psi$       | Psychological environment |
+| $B$    | $J$          | Joint/body position |
+|        | $P$          | Physiological state |
+| $N$    | $n$, $s$     | Neuronal activity, synaptic connectome |
+| $M$    |              |                                        |
+
+---
+
+- And the relations among them, e.g. $W \rightarrow B \rightarrow N \leftrightarrow M$
+- With sufficient precision and specificity
+- Across relevant spatial and temporal scales
+
+---
+
+```{r, fig.cap="Sejnowski et al. 2014", out.width="800px"}
+knitr::include_graphics("https://media.nature.com/lw926/nature-assets/neuro/journal/v17/n11/images/nn.3839-F1.jpg")
+```
+
+---
+
+- Reconciling explanatory dialects
+
+---
+
+$$\dot{\mathbf{x}}=A(t)\mathbf{x}(t)+B(t)\mathbf{u}(t)$$
+
+$$\mathbf{y(t)}=C(t)\mathbf{y}(t)+D(t)\mathbf{u}(t)$$
+
+---
+
+```{r, out.width="900px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/1/12/Typical_State_Space_model.png")
+```
+
+---
+
+```{r, out.width="850px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg/1200px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg")
+```
+
+---
+
+```{r}
+knitr::include_graphics("https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg")
+```
+
+## Algorithms vs. Dynamics
+
+- [Van Gelder, 1995](http://dx.doi.org/10.2307/2941061)
+- How to regulate the speed of a steam engine?
+
+
+---
+
+```{r, out.width="800px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/9/9e/Maquina_vapor_Watt_ETSIIM.jpg")
+```
+
+<small>Watt steam engine</small>
+
+---
+
+```
+1. Measure the speed of the flywheel.
+2. Compare the actual speed against the desired speed.
+3. If there is no discrepancy, return to step 1. Otherwise,
+    a. measure the current steam pressure;
+    b. calculate the desired alteration in steam pressure;
+    c. calculate the necessary throttle valve adjustment.
+4. Make the throttle valve adjustment.
+5. Return to step 1. 
+```
+
+---
+
+```{r, out.height="600px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/1/1e/Centrifugal_governor.png")
+```
+
+## Why cybernetics, especially PCT?
+
+---
+
+- Reconciles ecological and computational approaches
+- Hierarchical/nested control systems commonplace
+- Plausible mechanism for development
+
+---
+
+- More transparent mapping onto physical substrates
+- Scheme for visualizing sequential processes
+
+---
+
+```{r, out.width="550px"}
+knitr::include_graphics("img/powers-6.1.png")
+```
+
+<small>[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)</small>
+
+---
+
+- Changing zeitgeist?
+
+---
+
+```{r, out.width="800px"}
+knitr::include_graphics("img/krakauer.jpg")
+```
+
+---
+
+```{r, out.width="750px"}
+knitr::include_graphics("https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr1.jpg")
+```
+
+<small>Krakauer et al. 2017</small>
+
+---
+
+However...
+
+---
+
+```{r, out.width="700px"}
+knitr::include_graphics("img/beer-2003-fig-2.jpg")
+```
+
+---
+
+```{r, out.width="600px"}
+knitr::include_graphics("img/beer-2003-fig-12.jpg")
+```
+
+---
+
+>"*As with any feed- back system, it can be very difficult to disentangle cause and effect. Effects 'play through the system' to become causes.*"
+
+---
+
+>"*...we may need to modify our expectations regarding the demands we can reasonably place upon a componential explanation...*"
+
+
+---
+
+>"*stemming from the simple fact that the agent and its environment are really just two components of a single larger system.*"
+
+---
+
+>"*there are clearly many challenges facing a dynamical approach to cognition...it is still quite impossible to fully visualize or characterize its complete 16-dimensional dynamics.*"
+
+---
+
+>"*There is no question that the patterns of activity of the interneurons play a key role in the operation of the agent analyzed here, but is this role best understood as a representational one?*"
+
+# Getting there from here
+
+---
+
+>"*In response to a question about the relevance of thinking of the brain as a complex dynamical system...*"
+
+---
+
+>"*the philosopher of mind Patricia Churchland once replied 'It’s obviously true, but so what? Then what is your research program?'*"
+
+<small>
+Lewin 1992 in Beer 2003
+</small>
+
+---
+
+- *Deep* and *complete* computational theories of tasks
+- Amenable to control theory analyses
+- Multiple measures of state spaces, dense in time
+- More attention to 'unknown-knowns'
+- Better ways to communicate our 'known-knowns' & 'known-unknowns'
 
 ## We don't have to share toothbrushes...
 
+---
+
 - But we can share our data, our code, our materials, and our procedures
-- In **F**indable, **A**ccessible, **I**nteroperable, and **R**eproducible ways [@Wilkinson2016-qr]
+- In **F**indable, **A**ccessible, **I**nteroperable, and **R**eproducible ways (Wilkinson et al. 2016)
 
-## Two failures
-
-- What behaviors are most commonly measured in child development research?
+## Make knowable unknowns
 
 ---
 
-What is the developmental trajectory of sensitivity to motion?
+What behaviors are most commonly measured in child development research?
 
-<iframe src="https://www.frontiersin.org/articles/10.3389/fnint.2015.00049/full" width=1000 height=600>
-</iframe>
+---
 
-[@Hadad2015-qd]
+What is the developmental trajectory of sensitivity to motion? 
+
+(Hadad et al., 2015)
 
 ---
 
@@ -311,26 +796,52 @@ What is the developmental trajectory of sensitivity to motion?
 knitr::include_graphics("https://www.frontiersin.org/files/Articles/145704/fnint-09-00049-HTML/image_m/fnint-09-00049-t001.jpg")
 ```
 
+## Imagine if...
+
 ---
 
-No similar database for adult motion sensitivity.
+All of the prior studies that used the X paradigm were openly shared in formats you could use to calculate *a priori* distributions for your variables of interest.
 
-
-
-## And in response
-
-- PLAY project
-- Web-based/version-controlled protocols
-
-## Imagine if 
-
-All of the prior studies that used the X paradigm were openly shared in formats you could use to calculate a prior distribution.
+---
 
 The display code used for a study you wanted to replicate was readily available so you could verify the parameters used and make decisions for your planned replication.
 
-# Out of control
+---
 
-# Thank you
+```{r, out.width="600px"}
+knitr::include_graphics("https://images-na.ssl-images-amazon.com/images/I/51eZRbjkr0L._SX425_.jpg")
+```
+
+---
+
+```{r, out.width="600px"}
+knitr::include_graphics("https://store-images.s-microsoft.com/image/apps.34543.13914573398096857.0633d4e9-89b8-42e6-b9dd-45f3a13988bc.1b85edd5-6a5c-4c63-ba18-1ed5231cb9f8?mode=scale&q=90&h=270&w=270&background=%23FFFFFF")
+```
+
+---
+
+<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px>
+
+<!-- Blind men ->
+
+---
+
+<div class="centered">
+<img src="http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg" height=500px>
+
+<!-- Girl hugging elephant -->
+
+# Take homes
+
+---
+
+- Psychology is a really hard science
+- Multiple, hierarchically nested and circular control systems are required
+
+---
+
+- Cybernetic approaches can help illuminate them
+- A commitment to transparency, openness, and sharing will accelerate understanding
 
 ---
 
@@ -338,19 +849,29 @@ The display code used for a study you wanted to replicate was readily available 
   <source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
   </video>
 
+<small>
 rogilmore@psu.edu
 
 <https://gilmore-lab.github.io>
 
 <https://psu-psychology.github.io/cog-bbag-2019-2020/2019-11-13-gilmore.html/>
+</small>
 
 ---
 
-## Stack
-
+<small>
 This talk was produced on `r Sys.Date()` in [RStudio](http://rstudio.com) version using R Markdown and the reveal.JS framework.
 The code and materials used to generate the slides may be found at <https://psu-psychology.github.io/cog-bbag-2019-2020/2019-11-13-gilmore.html/>.
+</small>
+
+---
+
+<small>
 Information about the R Session that produced the code is as follows:
+</small>
 
 ```{r session-info}
 sessionInfo()
+```
+
+
