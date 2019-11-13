@@ -767,8 +767,9 @@ Lewin 1992 in Beer 2003
 
 - *Deep* and *complete* computational theories of tasks
 - Amenable to control theory analyses
-- Beyond ordinal predictions
-- Complexity before simplicity
+- Multiple measures of state spaces, dense in time
+- More attention to 'unknown-knowns'
+- Better ways to communicate our 'known-knowns' & 'known-unknowns'
 
 ## We don't have to share toothbrushes...
 
@@ -781,7 +782,7 @@ Lewin 1992 in Beer 2003
 
 ---
 
-- What behaviors are most commonly measured in child development research?
+What behaviors are most commonly measured in child development research?
 
 ---
 
@@ -839,8 +840,8 @@ knitr::include_graphics("https://store-images.s-microsoft.com/image/apps.34543.1
 
 ---
 
-- Cybernetic approaches can help illuminate
-- A commitment to transparency, openness, and sharing will accelerate progress
+- Cybernetic approaches can help illuminate them
+- A commitment to transparency, openness, and sharing will accelerate understanding
 
 ---
 
